@@ -1,0 +1,31 @@
+{
+	"engines": {
+		"node": ">=20.6.0"
+	},
+	"type": "module",
+	"name": "drizzle-sqlite-basic-example",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"db:generate": "drizzle-kit generate:sqlite",
+		"db:push": "drizzle-kit push:sqlite",
+		"db:studio": "drizzle-kit studio",
+		"build": "npx tsc",
+		"dev": "node --env-file=.env --watch --loader ts-node/esm index.ts",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Jason Lengstorf <jason@learnwithjason.dev>",
+	"license": "ISC",
+	"dependencies": {
+		"better-sqlite3": "^9.4.1",
+		"drizzle-orm": "^0.29.3"
+	},
+	"devDependencies": {
+		"@types/better-sqlite3": "^7.6.9",
+		"@types/node": "^20.11.19",
+		"drizzle-kit": "^0.20.14",
+		"ts-node": "^10.9.2",
+		"typescript": "^5.3.3"
+	}
+}
